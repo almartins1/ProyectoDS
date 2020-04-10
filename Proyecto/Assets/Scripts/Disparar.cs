@@ -6,6 +6,7 @@ public class Disparar : MonoBehaviour
 {
 	public Transform fire;
 	public GameObject pewPrefab;
+    public Rigidbody2D rb;
 
     // Update is called once per frame
     void Update()
@@ -17,5 +18,7 @@ public class Disparar : MonoBehaviour
 	void pew()
 	{
 	Instantiate(pewPrefab, fire.position, fire.rotation);
+        rb.AddForce(new Vector2(22f,rb.position.y));
+       
 	}
 }
