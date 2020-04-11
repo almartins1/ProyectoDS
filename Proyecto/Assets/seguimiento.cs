@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class seguimiento : MonoBehaviour
 {
-    public Rigidbody2D rb;
+    public GameObject GO;
     public Camera camara;
     public Movement objeto;
     private float hor;
+    TextMesh tx;
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        GO = GetComponent<GameObject>();
         camara = GetComponent<Camera>();
         
 
@@ -21,6 +22,6 @@ public class seguimiento : MonoBehaviour
     {
 
 
-        camara.transform.Translate((new Vector2(objeto.hor * objeto.sped, objeto.ver * objeto.sped))*Time.deltaTime);
+        
     }
 }
