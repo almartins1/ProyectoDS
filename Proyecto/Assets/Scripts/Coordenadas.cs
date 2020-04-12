@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class Coordenadas : MonoBehaviour
 {
+    public Dict dict;
     Dictionary<int, Vector2> coordenadas = new Dictionary<int, Vector2>();
     // Start is called before the first frame update
     int count = 0;
     Vector2 posi;
     void Start()
     {
+        for(int i = 0; i< 10; i++)
+        {
+            dict.MetodoA();
+        }
+        dict.MetodoA();
         for(float i = 0; i < 10000; i++)
         {
             for(float j = 0; j <1000; j++)
