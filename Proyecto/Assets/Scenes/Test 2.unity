@@ -279,7 +279,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ed13f2acda63742a1e9c0c7ddf4305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dict: {fileID: 718848342}
+  Flag: {fileID: 718848341}
+  a: 10000
+  b: 1000
 --- !u!65 &2037862784
 BoxCollider:
   m_ObjectHideFlags: 0
