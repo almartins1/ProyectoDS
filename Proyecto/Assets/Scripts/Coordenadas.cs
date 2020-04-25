@@ -17,8 +17,8 @@ public class Coordenadas : MonoBehaviour
     public int b;
     void Start()
     {
-        Pila pila = new Pila(a*b);
-        Queue Welinton = new Queue(a*b);
+        Pila pila = new Pila(a * b);
+        Queue Welinton = new Queue(a * b);
         for (float i = 0; i < a; i++)
         {
             for (float j = 0; j < b; j++)
@@ -32,7 +32,7 @@ public class Coordenadas : MonoBehaviour
             }
         }
         int mision;
-        mision = Random.Range(0, a*b);
+        mision = Random.Range(0, a * b);
         if (pack.BuscaMisiones(mision))
         {
             Vector2 Hola = coordenadas[mision];
@@ -44,11 +44,11 @@ public class Coordenadas : MonoBehaviour
         int x = pila.pop();
         print(x);
         print(coordenadas[y]);
-        print(coordenadas[x]);        
+        print(coordenadas[x]);
         print(coordenadas[mision]);
         print(count);
     }
-    
+
     // Update is called once per frame
 
 }
