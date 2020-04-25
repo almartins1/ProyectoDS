@@ -1,25 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Movement : MonoBehaviour
 {
 	public float hor, ver;
 	public float sped = 1;
 	Rigidbody2D rbd;
-   private  Animator anim;
-	
+    private  Animator anim;
+    public InputField inputField;
+
 	
 	void Awake()
 	{
+
 		rbd = GetComponent<Rigidbody2D>(); //Llamo el rigidbody que ya he creado
         anim = GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update()
     {
+           
         hor = Input.GetAxisRaw("Horizontal");
 		ver = Input.GetAxisRaw("Vertical");
+
+
+
     }
     void FixedUpdate()
     {
