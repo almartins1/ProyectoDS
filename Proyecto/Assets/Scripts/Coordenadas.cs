@@ -4,31 +4,47 @@ using UnityEngine;
 
 public class Coordenadas : MonoBehaviour
 {
-    public Dict dict;
+    public ListaMisiones listamisiones;
+    public Pila pp;
+    public Queue aasd;
+    [SerializeField] GameObject Flag;
     Dictionary<int, Vector2> coordenadas = new Dictionary<int, Vector2>();
     // Start is called before the first frame update
-    int count = 0;
+    int count = 1;
     Vector2 posi;
+    ListaMisiones pack = new ListaMisiones();
+    public int a;
+    public int b;
     void Start()
     {
-        for(int i = 0; i< 10; i++)
+        Pila pila = new Pila(a*b);
+        Queue Welinton = new Queue(a*b);
+        for (float i = 0; i < a; i++)
         {
-            dict.MetodoA();
-        }
-        dict.MetodoA();
-        for(float i = 0; i < 10000; i++)
-        {
-            for(float j = 0; j <1000; j++)
+            for (float j = 0; j < b; j++)
             {
                 posi = new Vector2(i, j);
                 coordenadas.Add(count, posi);
+                pila.push(count);
+                Welinton.enqueue(count);
+                pack.InsertarMision(count);
                 count++;
             }
         }
         int mision;
-        mision = Random.Range(0, 10000000);
-        Vector2 Hola = coordenadas[mision];
-        transform.position = Hola;
+        mision = Random.Range(0, a*b);
+        if (pack.BuscaMisiones(mision))
+        {
+            Vector2 Hola = coordenadas[mision];
+            transform.position = Hola;
+            Flag.gameObject.SetActive(true);
+        }
+        int y = Welinton.dequeue();
+        print(y);
+        int x = pila.pop();
+        print(x);
+        print(coordenadas[y]);
+        print(coordenadas[x]);        
         print(coordenadas[mision]);
         print(count);
     }
