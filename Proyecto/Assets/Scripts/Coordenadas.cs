@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Coordenadas : MonoBehaviour
 {
     public ListaMisiones listamisiones;
     public Pila pp;
+    int punto =0;
     public Queue aasd;
     [SerializeField] GameObject Flag;
     Dictionary<int, Vector2> coordenadas = new Dictionary<int, Vector2>();
@@ -15,40 +17,68 @@ public class Coordenadas : MonoBehaviour
     ListaMisiones pack = new ListaMisiones();
     public int a;
     public int b;
+    int mision;
+    public Text puntos;
+    public GameObject ubicacion;
+    public GameObject sonido;
+    public GameObject este;
+
+    private void Update()
+    {
+        string puntaje ="objetvo en:  "+ ubicacion.transform.position+ "  "+ "Puntaje es " + punto;
+        puntos.text = puntaje; 
+    }
     void Start()
     {
-        Pila pila = new Pila(a * b);
-        Queue Welinton = new Queue(a * b);
-        for (float i = 0; i < a; i++)
-        {
-            for (float j = 0; j < b; j++)
-            {
-                posi = new Vector2(i, j);
-                coordenadas.Add(count, posi);
-                pila.push(count);
-                Welinton.enqueue(count);
-                pack.InsertarMision(count);
-                count++;
-            }
-        }
-        int mision;
-        mision = Random.Range(0, a * b);
-        if (pack.BuscaMisiones(mision))
-        {
-            Vector2 Hola = coordenadas[mision];
-            transform.position = Hola;
-            Flag.gameObject.SetActive(true);
-        }
-        int y = Welinton.dequeue();
-        print(y);
-        int x = pila.pop();
-        print(x);
-        print(coordenadas[y]);
-        print(coordenadas[x]);
-        print(coordenadas[mision]);
-        print(count);
-    }
+        este.SetActive(false);
+       
 
     // Update is called once per frame
 
 }
+
+    public void OnTriggerStay2D(Collider2D col)
+    {
+        
+
+        if (col.tag == "Player") {
+            Instantiate(sonido);
+            punto++;
+            este.SetActive(true);
+            Pila pila = new Pila(a * b);
+            Queue Welinton = new Queue(a * b);
+            for (float i = 0; i < a; i++)
+            {
+                for (float j = 0; j < b; j++)
+                {
+                    posi = new Vector2(i, j);
+                    coordenadas.Add(count, posi);
+                    pila.push(count);
+                    Welinton.enqueue(count);
+                    pack.InsertarMision(count);
+                    count++;
+                }
+            }
+
+            mision = Random.Range(0, a * b);
+            if (pack.BuscaMisiones(mision))
+            {
+                Vector2 Hola = coordenadas[mision];
+                transform.position = Hola;
+                Flag.gameObject.SetActive(true);
+            }
+            int y = Welinton.dequeue();
+            print(y + " y");
+            int x = pila.pop();
+            print(x + " x");
+            print(coordenadas[y] + " cordenads cola");
+            print(coordenadas[x] + " cordenas ppila");
+            print(coordenadas[mision] + " cordenadas de verdad");
+            print(count + " el count");
+
+        }
+
+    }
+}
+    
+    

@@ -15,9 +15,9 @@ public class prueba : MonoBehaviour
     // Required when Using UI elements.
     string nuevo = "nada";
 
-    void Start()
+     void Start()
     {
-
+       
         objeto.gameObject.SetActive(false);
         cartel.gameObject.SetActive(false);
         anim = GetComponent<Animator>();
@@ -31,6 +31,8 @@ public class prueba : MonoBehaviour
     }
     public void OnTriggerExit2D(Collider2D col)
     {
+
+        
         if (col.tag == "Player")
         {
             

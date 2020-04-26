@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
 	Rigidbody2D rbd;
     private  Animator anim;
     public InputField inputField;
+   
 
 	
 	void Awake()
