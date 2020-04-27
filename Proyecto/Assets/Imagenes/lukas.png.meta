@@ -1,103 +1,55 @@
 fileFormatVersion: 2
-guid: 4b01e1105741f1946a580aabed47b6c0
+guid: 97d9c25b1e0c2d44e969b95b646c7e7c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7928858964255100155
-    second: Skeleton Idle_0
+      213: 3043933469912173326
+    second: lukas_0
   - first:
-      213: -289379152601194012
-    second: Skeleton Idle_1
+      213: -7228569666550741319
+    second: lukas_1
   - first:
-      213: -8331204611373963175
-    second: Skeleton Idle_2
+      213: -5898667683089181636
+    second: lukas_2
   - first:
-      213: 5974531914738200450
-    second: Skeleton Idle_3
+      213: -7330051178496514108
+    second: lukas_3
   - first:
-      213: 1900126310482141809
-    second: Skeleton Idle_4
+      213: 9024089126820197007
+    second: lukas_4
   - first:
-      213: -9007221444457188966
-    second: Skeleton Idle_5
+      213: -2684506657260921903
+    second: lukas_5
   - first:
-      213: 6361432402118329833
-    second: Skeleton Idle_6
+      213: -8056262811056161396
+    second: lukas_6
   - first:
-      213: 1571032212639168507
-    second: Skeleton Idle_7
+      213: 580274623235883530
+    second: lukas_7
   - first:
-      213: 7611122742130972421
-    second: Skeleton Idle_8
+      213: 2035558850692654639
+    second: lukas_8
   - first:
-      213: 5180031473007828922
-    second: Skeleton Idle_9
+      213: -8077345873959300643
+    second: lukas_9
   - first:
-      213: -5784503621931760760
-    second: Skeleton Idle_10
+      213: -2528636148469437521
+    second: lukas_10
   - first:
-      213: -7669199974717478801
-    second: Skeleton Idle_11
+      213: -7784687511076048712
+    second: lukas_11
   - first:
-      213: 3903615100110924101
-    second: Skeleton Idle_12
+      213: -3807050910411213462
+    second: lukas_12
   - first:
-      213: 4177584398159507268
-    second: Skeleton Idle_13
+      213: -5196013447210270252
+    second: lukas_13
   - first:
-      213: 4054819160004274643
-    second: Skeleton Idle_14
+      213: 1414593560828743994
+    second: lukas_14
   - first:
-      213: 2801267706377102362
-    second: Skeleton Idle_15
-  - first:
-      213: -7318633395731833191
-    second: Skeleton Idle_16
-  - first:
-      213: -4676996159309301109
-    second: Skeleton Idle_17
-  - first:
-      213: 6775547103735352831
-    second: Skeleton Idle_18
-  - first:
-      213: 1164456518738287341
-    second: Skeleton Idle_19
-  - first:
-      213: -7153953932502789281
-    second: Skeleton Idle_20
-  - first:
-      213: -8069210379627262733
-    second: Skeleton Idle_21
-  - first:
-      213: -3746115248044369886
-    second: Skeleton Idle_22
-  - first:
-      213: 8217026843930448374
-    second: Skeleton Idle_23
-  - first:
-      213: 1857863476202809041
-    second: Skeleton Idle_24
-  - first:
-      213: 1267042924793777972
-    second: Skeleton Idle_25
-  - first:
-      213: 7825290938538764067
-    second: Skeleton Idle_26
-  - first:
-      213: -4445360837196424677
-    second: Skeleton Idle_27
-  - first:
-      213: -1023500264515209163
-    second: Skeleton Idle_28
-  - first:
-      213: -6096908858621231775
-    second: Skeleton Idle_29
-  - first:
-      213: 5941770279583656957
-    second: Skeleton Idle_30
-  - first:
-      213: 7115239857967302712
-    second: Skeleton Idle_31
+      213: 6777113676339535326
+    second: lukas_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -141,7 +93,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 2
+  spritePixelsToUnits: 8
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
@@ -195,13 +147,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skeleton Idle_0
+      name: lukas_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 24
-        height: 32
+        y: 926
+        width: 238
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,209 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfcc8961837f80e60800000000000000
-      internalID: 7928858964255100155
+      spriteID: e0b890a0d593e3a20800000000000000
+      internalID: 3043933469912173326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Idle_1
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 0
-        width: 24
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e16dc3a13bebfbf0800000000000000
-      internalID: -289379152601194012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Idle_2
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 24
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95865fbeb8d916c80800000000000000
-      internalID: -8331204611373963175
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Idle_3
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 24
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28f643d3f1dc9e250800000000000000
-      internalID: 5974531914738200450
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Idle_4
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 24
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 17269a4efca9e5a10800000000000000
-      internalID: 1900126310482141809
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Idle_5
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 0
-        width: 24
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9139dd81dbeff280800000000000000
-      internalID: -9007221444457188966
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Idle_6
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 24
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e54ceeb019584850800000000000000
-      internalID: 6361432402118329833
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Idle_7
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 0
-        width: 24
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bf7bd05497d6dc510800000000000000
-      internalID: 1571032212639168507
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Idle_8
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 24
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5071d9afec320a960800000000000000
-      internalID: 7611122742130972421
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Idle_9
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 0
-        width: 24
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: abf99f10e2b23e740800000000000000
-      internalID: 5180031473007828922
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Idle_10
+      name: lukas_1
       rect:
         serializedVersion: 2
         x: 240
-        y: 0
-        width: 24
-        height: 32
+        y: 926
+        width: 238
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -419,8 +182,302 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8830ccc7a9059bfa0800000000000000
-      internalID: -5784503621931760760
+      spriteID: 9b64417df26feab90800000000000000
+      internalID: -7228569666550741319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lukas_2
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 926
+        width: 238
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c349465aef8b32ea0800000000000000
+      internalID: -5898667683089181636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lukas_3
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 926
+        width: 238
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c728481a4d664a90800000000000000
+      internalID: -7330051178496514108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lukas_4
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 926
+        width: 238
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f823599cf310c3d70800000000000000
+      internalID: 9024089126820197007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lukas_5
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 926
+        width: 238
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1db9ac81b67bebad0800000000000000
+      internalID: -2684506657260921903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lukas_6
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 926
+        width: 238
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8dbec148a7623090800000000000000
+      internalID: -8056262811056161396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lukas_7
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 926
+        width: 238
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02062602bc8d0800800000000000000
+      internalID: 580274623235883530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lukas_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 782
+        width: 238
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2620f66df1cf3c10800000000000000
+      internalID: 2035558850692654639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lukas_9
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 782
+        width: 238
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd150b629b087ef80800000000000000
+      internalID: -8077345873959300643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lukas_10
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 782
+        width: 238
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab644cf1da78ecd0800000000000000
+      internalID: -2528636148469437521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lukas_11
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 782
+        width: 238
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b074e624fb37f390800000000000000
+      internalID: -7784687511076048712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lukas_12
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 782
+        width: 238
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a65bc1b1e53aa2bc0800000000000000
+      internalID: -3807050910411213462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lukas_13
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 782
+        width: 238
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d101e6ac4d04e7b0800000000000000
+      internalID: -5196013447210270252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lukas_14
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 782
+        width: 238
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3190c64955a1a310800000000000000
+      internalID: 1414593560828743994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lukas_15
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 782
+        width: 238
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eddd8a06bf42d0e50800000000000000
+      internalID: 6777113676339535326
       vertices: []
       indices: 
       edges: []

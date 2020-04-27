@@ -22,7 +22,9 @@ public class Coordenadas : MonoBehaviour
     public GameObject ubicacion;
     public GameObject sonido;
     public GameObject este;
-
+    public bool laHizo;
+    Pila pila;
+    Queue Welinton;
     private void Update()
     {
         string puntaje ="objetvo en:  "+ ubicacion.transform.position+ "  "+ "Puntaje es " + punto;
@@ -31,22 +33,9 @@ public class Coordenadas : MonoBehaviour
     void Start()
     {
         este.SetActive(false);
-       
 
-    // Update is called once per frame
-
-}
-
-    public void OnTriggerStay2D(Collider2D col)
-    {
-        
-
-        if (col.tag == "Player") {
-            Instantiate(sonido);
-            punto++;
-            este.SetActive(true);
-            Pila pila = new Pila(a * b);
-            Queue Welinton = new Queue(a * b);
+        pila = new Pila(a * b);
+            Welinton = new Queue(a * b);
             for (float i = 0; i < a; i++)
             {
                 for (float j = 0; j < b; j++)
@@ -59,24 +48,49 @@ public class Coordenadas : MonoBehaviour
                     count++;
                 }
             }
+       
 
-            mision = Random.Range(0, a * b);
-            if (pack.BuscaMisiones(mision))
-            {
-                Vector2 Hola = coordenadas[mision];
-                transform.position = Hola;
-                Flag.gameObject.SetActive(true);
-            }
-            int y = Welinton.dequeue();
-            print(y + " y");
-            int x = pila.pop();
-            print(x + " x");
-            print(coordenadas[y] + " cordenads cola");
-            print(coordenadas[x] + " cordenas ppila");
-            print(coordenadas[mision] + " cordenadas de verdad");
-            print(count + " el count");
+    // Update is called once per frame
+
+}
+
+    public void OnTriggerEnter2D(Collider2D col)
+    {
+        
+
+        if (col.tag == "Player") {
+            punto++;
+            Instantiate(sonido);
+           
+            este.SetActive(true);
+            ubicacion.SetActive(false);
+            laHizo = true;
+            
 
         }
+
+    }
+
+    public void dadorDeMisiones()
+    {
+        ubicacion.SetActive(true);
+        mision = Random.Range(0, a * b);
+        if (pack.BuscaMisiones(mision))
+        {
+            Vector2 Hola = coordenadas[mision];
+            transform.position = Hola;
+            Flag.gameObject.SetActive(true);
+        }
+        int y = Welinton.dequeue();
+        print(y + " y");
+        int x = pila.pop();
+        print(x + " x");
+        print(coordenadas[y] + " cordenads cola");
+        print(coordenadas[x] + " cordenas ppila");
+        print(coordenadas[mision] + " cordenadas de verdad");
+        print(count + " el count");
+
+        laHizo = false;
 
     }
 }
