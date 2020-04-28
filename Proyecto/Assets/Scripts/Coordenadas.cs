@@ -2,29 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Timers;
+
 
 public class Coordenadas : MonoBehaviour
 {
-    public ListaMisiones listamisiones;
-    public Pila pp;
-    int punto =0;
-    public Queue aasd;
+    public LArray aaaa;
+    public ListaMisiones listamisiones;    
+    int punto =0;   
     [SerializeField] GameObject Flag;
     Dictionary<int, Vector2> coordenadas = new Dictionary<int, Vector2>();
-    // Start is called before the first frame update
     int count = 1;
     Vector2 posi;
     ListaMisiones pack = new ListaMisiones();
     public int a;
     public int b;
-    int mision;
+    private int mision;
     public Text puntos;
     public GameObject ubicacion;
     public GameObject sonido;
     public GameObject este;
     public bool laHizo;
-    Pila pila;
-    Queue Welinton;
+    LArray llol;
     private void Update()
     {
         string puntaje ="objetvo en:  "+ ubicacion.transform.position+ "  "+ "Puntaje es " + punto;
@@ -32,26 +31,24 @@ public class Coordenadas : MonoBehaviour
     }
     void Start()
     {
+        mision = Random.Range(0, a * b);
         este.SetActive(false);
-
-        pila = new Pila(a * b);
-            Welinton = new Queue(a * b);
-            for (float i = 0; i < a; i++)
+        llol = new LArray(a * b);
+        float timeNow = Time.realtimeSinceStartup;
+        print(timeNow);
+        for (float i = 0; i < a; i++)
             {
-                for (float j = 0; j < b; j++)
-                {
-                    posi = new Vector2(i, j);
-                    coordenadas.Add(count, posi);
-                    pila.push(count);
-                    Welinton.enqueue(count);
-                    pack.InsertarMision(count);
-                    count++;
+            for (float j = 0; j < b; j++)
+            {
+                 posi = new Vector2(i, j);
+                 coordenadas.Add(count, posi);
+                 //llol.push(count);                         //Esto es para Listas con arreglos
+                 pack.InsertarMision(count);              //Esto es para listas enlazadas
+                count++;
                 }
             }
-       
-
-    // Update is called once per frame
-
+        float timeNow2 = Time.realtimeSinceStartup;
+        print(timeNow2);
 }
 
     public void OnTriggerEnter2D(Collider2D col)
@@ -64,9 +61,14 @@ public class Coordenadas : MonoBehaviour
            
             este.SetActive(true);
             ubicacion.SetActive(false);
-            laHizo = true;
-            
-
+            print(mision + "Esta es la id");
+            float timeNow = Time.realtimeSinceStartup;
+            print(timeNow);
+            pack.EliminarM(mision);                    //Esto es para listas enlazadas
+            //llol.delete(mision);                         //Esto es para Listas con arreglos
+            float timeNow2 = Time.realtimeSinceStartup;
+            print(timeNow2);
+            laHizo = true;          
         }
 
     }
@@ -75,21 +77,32 @@ public class Coordenadas : MonoBehaviour
     {
         ubicacion.SetActive(true);
         mision = Random.Range(0, a * b);
-        if (pack.BuscaMisiones(mision))
+        print(mision + "Esta es la id");
+        float timeNow = Time.realtimeSinceStartup;
+        print(timeNow);
+        if (pack.BuscaMisiones(mision))                       //Esto es para listas enlazadas
         {
             Vector2 Hola = coordenadas[mision];
             transform.position = Hola;
-            Flag.gameObject.SetActive(true);
+            Flag.gameObject.SetActive(true);           
         }
-        int y = Welinton.dequeue();
-        print(y + " y");
-        int x = pila.pop();
-        print(x + " x");
-        print(coordenadas[y] + " cordenads cola");
-        print(coordenadas[x] + " cordenas ppila");
+        float timeNow2 = Time.realtimeSinceStartup;
+        print(timeNow2);
+        /*
+        float timeNow = Time.realtimeSinceStartup;
+        print(timeNow);
+        if (llol.search(mision))                                //Esto es para Listas con arreglos
+        {
+            Vector2 Hola = coordenadas[mision];
+            transform.position = Hola;
+            Flag.gameObject.SetActive(true);            
+        }
+        float timeNow2 = Time.realtimeSinceStartup;
+        print(timeNow2);
+        */
+  
         print(coordenadas[mision] + " cordenadas de verdad");
-        print(count + " el count");
-
+        print(count + " el count");        
         laHizo = false;
 
     }
