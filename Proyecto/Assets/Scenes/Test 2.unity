@@ -3882,7 +3882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Flag: {fileID: 529637297}
-  a: 10000
+  a: 1000
   b: 1000
   puntos: {fileID: 369045825}
   ubicacion: {fileID: 1742105579}
