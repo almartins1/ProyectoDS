@@ -14,12 +14,13 @@ public class prueba : MonoBehaviour
     public Animator anim;
     private  char[] je;
     private string pp="   d";
+    public GameObject ob;
     // Required when Using UI elements.
     string nuevo = "nada";
 
      void Start()
     {
-       
+        ob.gameObject.SetActive(false);
         objeto.gameObject.SetActive(false);
         cartel.gameObject.SetActive(false);
         anim = GetComponent<Animator>();
@@ -41,8 +42,8 @@ public class prueba : MonoBehaviour
         
         if (col.tag == "Player")
         {
-            
-            
+
+            ob.gameObject.SetActive(false);
             objeto.gameObject.SetActive(false);
             cartel.gameObject.SetActive(false);
             anim.SetBool("adentro", false);
@@ -57,7 +58,7 @@ public class prueba : MonoBehaviour
         sisas++;
         if (col.tag == "Player")
         {
-
+            ob.gameObject.SetActive(true);
             mision.SetBool("nuevo", laHizo);
             cartel.gameObject.SetActive(true);
             
