@@ -31,6 +31,8 @@ public class Coordenadas : MonoBehaviour
     }
     void Start()
     {
+        laHizo = true;
+        Flag.gameObject.SetActive(false);
         mision = Random.Range(0, a * b);
         este.SetActive(false);
         llol = new LArray(a * b);
