@@ -3889,6 +3889,7 @@ MonoBehaviour:
   sonido: {fileID: 433151108925881749, guid: 454db7a4d70a7804c99a8a738f26d00b, type: 3}
   este: {fileID: 1581207128}
   laHizo: 0
+  boton: {fileID: 684128679}
 --- !u!70 &1742105583
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

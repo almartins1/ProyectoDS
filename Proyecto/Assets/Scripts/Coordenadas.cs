@@ -23,6 +23,7 @@ public class Coordenadas : MonoBehaviour
     public GameObject sonido;
     public GameObject este;
     public bool laHizo;
+    public GameObject boton;
     LArray llol;
     private void Update()
     {
@@ -77,6 +78,7 @@ public class Coordenadas : MonoBehaviour
 
     public void dadorDeMisiones()
     {
+        boton.SetActive(false);
         ubicacion.SetActive(true);
         mision = Random.Range(0, a * b);
         print(mision + "Esta es la id");
