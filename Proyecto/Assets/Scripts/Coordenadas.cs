@@ -80,7 +80,7 @@ public class Coordenadas : MonoBehaviour
     {
         boton.SetActive(false);
         ubicacion.SetActive(true);
-        mision = Random.Range(0, a * b);
+        mision = Random.Range(1, a * b);
         print(mision + "Esta es la id");
         float timeNow = Time.realtimeSinceStartup;
         print(timeNow);

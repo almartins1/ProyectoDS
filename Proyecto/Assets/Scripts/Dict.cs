@@ -71,22 +71,32 @@ public class ListaMisiones
         }
         MonoBehaviour.print(aImpr.valor);
     }
+    public void Imptodo()
+    {
+        Node imp = cabeza;
+        while (imp != null)
+        {
+            MonoBehaviour.print(imp.valor);
+            imp = imp.next;
+        }
+    }
     public void EliminarM(int y)
     {
-        Node Mision = new Node(y);
+        Node Mision;
         Node Cc = cabeza;
         while ((Cc.next).valor != y)
         {
             Cc = Cc.next;
         }
-        if (Mision.next == null)
+        Mision = Cc;
+        if ((Cc.next).next == null)
         {
             Cc.next = null;
         }
         else
         {
-            Cc.next = Mision.next;
-            Mision.next = null;
+            Cc.next = (Mision.next).next;
+            //Mision.next = null;
         }
     }
 }
