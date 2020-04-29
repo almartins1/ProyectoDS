@@ -1,20 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class caminar : MonoBehaviour
 {
-
+    public Scrollbar scrol;
     public Transform target;
     public float speed;
     public GameObject boton;
     public GameObject cuadro;
     private Vector3 start, end;
+    public AudioSource au;
 
     // Use this for initialization
     void Start()
     {
+        scrol.value = 0.60f;
         cuadro.SetActive(false);
         if (target != null)
         {
@@ -27,7 +30,7 @@ public class caminar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        au.volume = scrol.value;
     }
 
     void FixedUpdate()
@@ -52,4 +55,6 @@ public class caminar : MonoBehaviour
         new WaitForSeconds(3);
         SceneManager.LoadScene("Test 2");
     }
+
+
 }
