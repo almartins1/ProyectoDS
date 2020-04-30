@@ -2,7 +2,7 @@
 
 La version del Unity es "Unity 2019.3.7f1"
 
-Este repositorio solo contiene el proyecto de unity.
+Este repositorio solo contiene el proyecto de unity. El ejecutable está en: https://drive.google.com/drive/folders/1pTUvjCAjG6HxP0neUx6jJiTKk476F04N?usp=sharing
 
 Las implementaciones de estructuras de datos estan en:
 
