@@ -2,6 +2,8 @@
 
 La version del Unity es "Unity 2019.3.7f1"
 
+Este repositorio solo contiene el proyecto de unity.
+
 Las implementaciones de estructuras de datos estan en:
 
 Proyecto -> Assets -> Scripts 
