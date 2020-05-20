@@ -82,13 +82,7 @@ public class caminar12 : MonoBehaviour
     }
 
 
-    public void cambiarEsena()
-    {
-
-
-        new WaitForSeconds(3);
-        SceneManager.LoadScene("Test 2");
-    }
+   
 
     public void OnTriggerStay2D(Collider2D col)
     {

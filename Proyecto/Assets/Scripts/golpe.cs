@@ -5,9 +5,10 @@ using UnityEngine;
 public class golpe : MonoBehaviour
 {
    public Animator anim;
+    public GameObject colider;
     void Start()
     {
-        
+        colider.SetActive(false);
     }
 
     // Update is called once per frame
@@ -20,10 +21,10 @@ public class golpe : MonoBehaviour
     {
         if (col.tag == "malo")
         {
-
+            colider.SetActive(true);
             anim.SetBool("golpe", true);
 
-            Debug.Log("traaa");
+           
         }
     }
 
@@ -32,6 +33,7 @@ public class golpe : MonoBehaviour
     {
         if (col.tag == "malo")
         {
+            colider.SetActive(false);
 
             anim.SetBool("golpe", false);
 
