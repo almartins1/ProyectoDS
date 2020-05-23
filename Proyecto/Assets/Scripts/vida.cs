@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class vida : MonoBehaviour
 {
+    public ArrayList arr = new ArrayList();
     int life = 3;
     public GameObject cora1, cora2, cora3;
     void Start()
     {
+        arr.Add("tonjeo");
         
+        Debug.Log(arr[0]);
+
     }
 
     private void FixedUpdate()

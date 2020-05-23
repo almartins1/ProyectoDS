@@ -6,9 +6,12 @@ public class golpe : MonoBehaviour
 {
    public Animator anim;
     public GameObject colider;
+    
     void Start()
     {
+        
         colider.SetActive(false);
+         
     }
 
     // Update is called once per frame
@@ -24,7 +27,7 @@ public class golpe : MonoBehaviour
             colider.SetActive(true);
             anim.SetBool("golpe", true);
 
-           
+            
         }
     }
 

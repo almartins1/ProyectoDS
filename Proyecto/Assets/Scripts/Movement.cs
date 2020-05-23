@@ -10,10 +10,15 @@ public class Movement : MonoBehaviour
 	Rigidbody2D rbd;
     private  Animator anim;
     public InputField inputField;
-   
+    public GameObject shop;
+    private bool shopActive;
 
-	
-	void Awake()
+
+    public void Start()
+    {
+        shop.SetActive(false);
+    }
+    void Awake()
 	{
 
 		rbd = GetComponent<Rigidbody2D>(); //Llamo el rigidbody que ya he creado
@@ -31,6 +36,24 @@ public class Movement : MonoBehaviour
     }
     void FixedUpdate()
     {
+        if (  Input.GetKeyDown(KeyCode.E)){
+            if (!shopActive)
+            {
+                shop.SetActive(true);
+
+                shopActive = true;
+
+            }
+            else {
+                shop.SetActive(false);
+
+                shopActive = false;
+
+            }
+            
+
+        }
+
         rbd.velocity = new Vector2(hor * sped, ver * sped);
 
         if(hor==0 && ver == 0)
@@ -75,5 +98,7 @@ public class Movement : MonoBehaviour
         
     }
 
-   
-    }
+    
+
+
+}
