@@ -50,11 +50,20 @@ public class caminar : MonoBehaviour
 
     public void cambiarEsena()
     {
+        StartCoroutine(Espera());
+    }
+
+    IEnumerator Espera()
+    {
         boton.SetActive(false);
         cuadro.SetActive(true);
-        new WaitForSeconds(3);
+
+
+        yield return new WaitForSeconds(3);
+
+
         SceneManager.LoadScene("Test 2");
     }
 
 
-}
+    }

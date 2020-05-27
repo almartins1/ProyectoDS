@@ -5,33 +5,47 @@ using UnityEngine;
 public class vida : MonoBehaviour
 {
     public ArrayList arr = new ArrayList();
-    int life = 3;
+    public int life = 6;
+    public int ataque=2;
+
     public GameObject cora1, cora2, cora3;
     void Start()
     {
-        arr.Add("tonjeo");
-        
-        Debug.Log(arr[0]);
+       
 
     }
 
     private void FixedUpdate()
     {
+        Debug.Log(ataque);
         switch (life)
         {
             case 0:
-                Destroy(cora1);
+                cora1.SetActive(false);
+                cora2.SetActive(false);
+                cora3.SetActive(false);
+
                 Debug.Log("You Lose");
                 new WaitForSeconds(6);
                 UnityEngine.Time.timeScale = 0.0f;
                 break;
 
-            case 1:
-                Destroy(cora2);
+            case 2:
+                cora1.SetActive(true);
+                cora2.SetActive(false);
+                cora3.SetActive(false);
                 break;
 
-            case 2:
-                Destroy(cora3);
+            case 4:
+                cora1.SetActive(true);
+                cora2.SetActive(true);
+                cora3.SetActive(false);
+                break;
+
+            case 6:
+                cora3.SetActive(true);
+                cora3.SetActive(true);
+                cora3.SetActive(true);
                 break;
 
 

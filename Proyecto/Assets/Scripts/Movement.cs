@@ -36,7 +36,7 @@ public class Movement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (  Input.GetKeyDown(KeyCode.E)){
+       /* if (  Input.GetKeyDown(KeyCode.E)){
             if (!shopActive)
             {
                 shop.SetActive(true);
@@ -52,7 +52,7 @@ public class Movement : MonoBehaviour
             }
             
 
-        }
+        }*/
 
         rbd.velocity = new Vector2(hor * sped, ver * sped);
 

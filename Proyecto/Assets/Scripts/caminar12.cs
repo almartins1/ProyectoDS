@@ -18,7 +18,7 @@ public class caminar12 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        
 
         if (target != null)
         {

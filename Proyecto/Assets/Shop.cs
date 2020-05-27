@@ -1,17 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 using System.Globalization;
 public class Shop : MonoBehaviour
 {
+    public vida vida;
     public GameObject[] objetos=new GameObject[16];
     public Dictionary<int, GameObject> diccionario = new Dictionary<int, GameObject>();
+    public Text dinero;
+    public GameObject x;
     void Start()
     {
         InsertandoALDiccionario();
-        
 
+        x.SetActive(false);
 
     }
 
@@ -217,4 +221,49 @@ public class Shop : MonoBehaviour
         }
 
     }
- }
+    public void Accion(int id)
+    {
+        int precio=0;
+        string temp=""+id;
+        int.TryParse(temp.Substring(2,temp.Length-2), out precio);
+        
+        
+
+        int coin;
+        int.TryParse(dinero.text, out coin);
+        Debug.Log(coin+"  "+ precio);
+        if (precio <= coin)
+        {
+            Debug.Log("casis");
+            coin -= precio;
+
+            int.TryParse(temp.Substring(0,1), out vida.ataque);
+            int.TryParse(temp.Substring(1, 2), out vida.life);
+
+            dinero.text = coin + "";
+
+        }
+        else
+        {
+            StartCoroutine(Espera());
+        }
+
+        
+
+
+
+    }
+
+    IEnumerator Espera()
+    {
+        x.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        x.SetActive(false);
+
+
+       
+
+
+        
+    }
+}
