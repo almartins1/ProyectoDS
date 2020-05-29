@@ -7,12 +7,13 @@ public class vida : MonoBehaviour
     public ArrayList arr = new ArrayList();
     public int life = 6;
     public int ataque=2;
-
+ 
     public GameObject cora1, cora2, cora3;
     void Start()
     {
-       
 
+       
+        
     }
 
     private void FixedUpdate()
@@ -53,6 +54,7 @@ public class vida : MonoBehaviour
     }
     void Update()
     {
+        
         Debug.Log(life);
     }
 

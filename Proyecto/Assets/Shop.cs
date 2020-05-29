@@ -10,10 +10,16 @@ public class Shop : MonoBehaviour
     public GameObject[] objetos=new GameObject[16];
     public Dictionary<int, GameObject> diccionario = new Dictionary<int, GameObject>();
     public Text dinero;
-    public GameObject x;
+    public GameObject x,sup;
+    public Inventario inventario;
+    public GameObject objeto;
+
+    private GameObject boton;
+
     void Start()
     {
-        InsertandoALDiccionario();
+
+                InsertandoALDiccionario();
 
         x.SetActive(false);
 
@@ -221,37 +227,70 @@ public class Shop : MonoBehaviour
         }
 
     }
+
+
     public void Accion(int id)
     {
-        int precio=0;
-        string temp=""+id;
-        int.TryParse(temp.Substring(2,temp.Length-2), out precio);
+        int x = 0;
+        Debug.Log(diccionario[11]);
+        int precio = 0;
+        string temp = "" + id;
         
-        
-
-        int coin;
-        int.TryParse(dinero.text, out coin);
-        Debug.Log(coin+"  "+ precio);
-        if (precio <= coin)
+        if (temp.Length > 7)
         {
-            Debug.Log("casis");
-            coin -= precio;
-
-            int.TryParse(temp.Substring(0,1), out vida.ataque);
-            int.TryParse(temp.Substring(1, 2), out vida.life);
-
-            dinero.text = coin + "";
-
+            x = 1;
         }
-        else
-        {
-            StartCoroutine(Espera());
-        }
-
+            int.TryParse(temp.Substring(4+x,temp.Length-4 -(x * 2)), out precio);
         
+         int coin;
+         int.TryParse(dinero.text, out coin);
+         Debug.Log(coin+"  "+ precio);
+        Debug.Log(inventario.Slots.Length);
+         if (precio <= coin)
+         {
+             for(int i=0; i < inventario.Slots.Length; i++)
+             {
+
+                 if (!inventario.lleno[i])
+                 {
+                     inventario.lleno[i] = true;
+                    int otroTem = 0;
+                    int.TryParse(temp.Substring(0, 2 + x), out otroTem);
+                    GameObject game=sup;
+                    game.transform.position = inventario.Slots[i].transform.position;
+                    game.transform.SetParent(inventario.Slots[i].transform);
+
+
+                    Instantiate(diccionario[otroTem], game.transform, false).transform.SetParent(inventario.Slots[i].transform);
+                   
+
+
+                    coin -= precio;
+
+                     int.TryParse(temp.Substring(2 + x, 3 + x), out vida.ataque);
+                    Debug.Log(temp.Substring(2 + x, 3 + x)+"terr");
+                    int.TryParse(temp.Substring(3 + x, 4 - x  ), out vida.life);
+                    break;
+
+                }
+               
+               
+
+            }
+             Debug.Log("casis");
+
+             dinero.text = coin + "";
+
+         }
+         else
+         {
+             StartCoroutine(Espera());
+         }
 
 
 
+
+     
     }
 
     IEnumerator Espera()

@@ -15,6 +15,7 @@ public class prueba : MonoBehaviour
     private  char[] je;
     private string pp="   d";
     public GameObject ob;
+    
     // Required when Using UI elements.
     string nuevo = "nada";
 
@@ -36,7 +37,6 @@ public class prueba : MonoBehaviour
     {
         laHizo = cor.laHizo;
         
-
     }
     public void OnTriggerExit2D(Collider2D col)
     {

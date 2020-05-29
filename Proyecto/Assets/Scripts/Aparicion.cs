@@ -5,7 +5,7 @@ using UnityEngine;
 public class Aparicion : MonoBehaviour
 {
     public Animator anim;
-    public GameObject flecha, letra;
+    public GameObject flecha, letra,boton1, boton2;
     void Start()
     {
         letra.SetActive(false);
@@ -14,9 +14,17 @@ public class Aparicion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.Z))
+        {
+            boton1.SetActive(true);
+            boton2.SetActive(true);
+        }
+        else
+        {
+            boton1.SetActive(false);
+            boton2.SetActive(false);
+        }
     }
-
     public void OnTriggerStay2D(Collider2D col)
     {
         if (col.tag == "Player")
@@ -36,4 +44,5 @@ public class Aparicion : MonoBehaviour
             anim.SetBool("dentro", false);
         }
     }
+
 }
