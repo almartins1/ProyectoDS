@@ -7,6 +7,9 @@ TagManager:
   - malo
   - Shop
   - inventario
+  - Verde
+  - Gemas
+  - F
   layers:
   - Default
   - TransparentFX
