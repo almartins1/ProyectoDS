@@ -9,7 +9,8 @@ public class Shop : MonoBehaviour
     public vida vida;
     public GameObject[] objetos=new GameObject[16];
     public Dictionary<int, GameObject> diccionario = new Dictionary<int, GameObject>();
-    public Text dinero;
+ 
+    public Disparos disp;
     public GameObject x,sup;
     public Inventario inventario;
     public GameObject objeto;
@@ -18,8 +19,8 @@ public class Shop : MonoBehaviour
 
     void Start()
     {
-
-                InsertandoALDiccionario();
+      
+        InsertandoALDiccionario();
 
         x.SetActive(false);
 
@@ -228,9 +229,11 @@ public class Shop : MonoBehaviour
 
     }
 
+   
 
     public void Accion(int id)
     {
+       
         int x = 0;
         Debug.Log(diccionario[11]);
         int precio = 0;
@@ -242,18 +245,19 @@ public class Shop : MonoBehaviour
         }
             int.TryParse(temp.Substring(4+x,temp.Length-4 -(x * 2)), out precio);
         
-         int coin;
-         int.TryParse(dinero.text, out coin);
-         Debug.Log(coin+"  "+ precio);
+         
         Debug.Log(inventario.Slots.Length);
-         if (precio <= coin)
+         if (precio <= disp.coin)
          {
-             for(int i=0; i < inventario.Slots.Length; i++)
+            
+            for (int i=0; i < inventario.Slots.Length; i++)
              {
 
                  if (!inventario.lleno[i])
                  {
-                     inventario.lleno[i] = true;
+                    
+                    
+                    inventario.lleno[i] = true;
                     int otroTem = 0;
                     int.TryParse(temp.Substring(0, 2 + x), out otroTem);
                     GameObject game=sup;
@@ -265,24 +269,28 @@ public class Shop : MonoBehaviour
                    
 
 
-                    coin -= precio;
+                    
 
                      int.TryParse(temp.Substring(2 + x, 3 + x), out vida.ataque);
                     Debug.Log(temp.Substring(2 + x, 3 + x)+"terr");
                     int.TryParse(temp.Substring(3 + x, 4 - x  ), out vida.life);
+                    disp.coin -= precio;
+                    disp.dinero.text = disp.coin + "";
                     break;
 
                 }
-               
-               
+
+                
 
             }
              Debug.Log("casis");
+            Debug.Log(disp.coin+"    "+precio);
+            
 
-             dinero.text = coin + "";
 
-         }
-         else
+
+        }
+        else
          {
              StartCoroutine(Espera());
          }
@@ -293,7 +301,7 @@ public class Shop : MonoBehaviour
      
     }
 
-    IEnumerator Espera()
+    public IEnumerator Espera()
     {
         x.SetActive(true);
         yield return new WaitForSeconds(1.5f);
