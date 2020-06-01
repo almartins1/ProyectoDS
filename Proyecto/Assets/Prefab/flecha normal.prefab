@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 812611582252118036}
   - component: {fileID: 1775934460829576227}
   m_Layer: 0
-  m_Name: flecha 1 (1)
+  m_Name: flecha normal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,6 +99,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 520
   pro: {fileID: 164512648169472202, guid: 291a9dce00dc4c04997d57122874dfde, type: 3}
+  x: 0
+  y: 0
+  pros: {fileID: 8291236013720210064, guid: 7c804f816d6b6604b9126bf3811c992a, type: 3}
 --- !u!61 &812611582252118036
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -10,8 +10,9 @@ public class Movement : MonoBehaviour
 	Rigidbody2D rbd;
     private  Animator anim;
     public InputField inputField;
-    public GameObject shop;
+    public GameObject shop,target;
     private bool shopActive;
+    public proyectil tap;
 
 
     public void Start()
@@ -67,6 +68,8 @@ public class Movement : MonoBehaviour
 
         if (hor >= 0.1)
         {
+            tap.x = 1;
+            tap.y = 0;
             anim.SetBool("abajo", false);
             anim.SetBool("izquierda", false);
             anim.SetBool("arriba", false);
@@ -75,6 +78,8 @@ public class Movement : MonoBehaviour
         }
          if(hor <= -0.1)
         {
+            tap.x = -1;
+            tap.y = 0;
             anim.SetBool("derecha", false);
             anim.SetBool("abajo", false);
             anim.SetBool("arriba", false);
@@ -82,6 +87,8 @@ public class Movement : MonoBehaviour
         }
         if(ver >= 0.1)
         {
+            tap.y = 1;
+            tap.x = 0;
             anim.SetBool("derecha", false);
             anim.SetBool("izquierda", false);
             anim.SetBool("abajo", false);
@@ -89,6 +96,8 @@ public class Movement : MonoBehaviour
         }
          if(ver <= -0.1)
         {
+            tap.y = -1;
+            tap.x = 0;
             anim.SetBool("derecha", false);
             anim.SetBool("izquierda", false);
             anim.SetBool("arriba", false);

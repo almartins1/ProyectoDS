@@ -202,6 +202,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 520
   pro: {fileID: 1130891265801067711, guid: f3cf02d24b663e2418dacfd3e07ed065, type: 3}
+  x: 0
+  y: 0
+  pros: {fileID: 8291236013720210064, guid: 7c804f816d6b6604b9126bf3811c992a, type: 3}
 --- !u!61 &4235239902487843674
 BoxCollider2D:
   m_ObjectHideFlags: 0

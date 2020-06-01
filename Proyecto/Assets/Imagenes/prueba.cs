@@ -22,7 +22,6 @@ public class prueba : MonoBehaviour
      void Start()
     {
         
-       
         ob.gameObject.SetActive(false);
         objeto.gameObject.SetActive(false);
         cartel.gameObject.SetActive(false);
