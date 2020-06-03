@@ -912,6 +912,9 @@ MonoBehaviour:
   - {fileID: 1496920341}
   - {fileID: 1023712677}
   - {fileID: 1999950523}
+  - {fileID: 1253750649}
+  - {fileID: 335954344}
+  - {fileID: 1517024387}
   disp: {fileID: 454080125}
   x: {fileID: 763197381}
   sup: {fileID: 705050287}
@@ -1508,8 +1511,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1471248120}
   m_HandleRect: {fileID: 1471248119}
   m_Direction: 2
-  m_Value: 1.0047584
-  m_Size: 0.23363245
+  m_Value: 1.0349481
+  m_Size: 0.23553413
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -16983,6 +16986,8 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Magia
       m_Image: {fileID: 0}
+    - m_Text: Reciente
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -17286,7 +17291,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.000015258789, y: 316.58618}
+  m_AnchoredPosition: {x: -0.000015258789, y: 304.44385}
   m_SizeDelta: {x: -4.7, y: 720.7}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2094495068

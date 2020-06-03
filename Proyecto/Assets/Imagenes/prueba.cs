@@ -15,13 +15,19 @@ public class prueba : MonoBehaviour
     private  char[] je;
     private string pp="   d";
     public GameObject ob;
+   
     
     // Required when Using UI elements.
     string nuevo = "nada";
 
      void Start()
     {
-        
+        string t = "";
+        t += "1 ";
+        t += "2 ";
+        t += "3 ";
+        Debug.Log(t);
+
         ob.gameObject.SetActive(false);
         objeto.gameObject.SetActive(false);
         cartel.gameObject.SetActive(false);

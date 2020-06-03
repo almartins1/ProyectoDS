@@ -30,6 +30,7 @@ public class Nodo
 }
 public class Tienda
 {
+    string t = "";
     Nodo raiz;
     public Tienda()
     {
@@ -122,12 +123,15 @@ public class Tienda
     {       
         raiz = deleteItem(raiz, id);       
     }
-    public void inorderRec(Nodo raiz)
+   private void inorderRec(Nodo raiz)
     {
+        
         if (raiz != null)
         {
             inorderRec(raiz.Izq);
+            
             MonoBehaviour.print(raiz.Dato + " ");
+           
             inorderRec(raiz.Der);
         }
     }
@@ -135,6 +139,30 @@ public class Tienda
     {
         inorderRec(raiz);
     }
+    int r = 0;
+    private string inorderRec2(Nodo raiz)
+    {
+      
+        
+        if (raiz != null)
+        {
+            inorderRec2(raiz.Izq);
+
+            // MonoBehaviour.print(raiz.Dato + " "+ r++ +"tra");
+            r++;
+            t +="-"+ raiz.Dato + "  ";
+            inorderRec2(raiz.Der);
+          
+        }
+        return t;
+    }
+    public string inorder2()
+    {
+       return inorderRec2(raiz);
+    }
+
 
 }
+
+
 

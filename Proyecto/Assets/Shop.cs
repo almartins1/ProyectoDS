@@ -9,17 +9,20 @@ public class Shop : MonoBehaviour
     public vida vida;
     public GameObject[] objetos=new GameObject[16];
     public Dictionary<int, GameObject> diccionario = new Dictionary<int, GameObject>();
- 
+    public Tienda reciente = new Tienda();
     public Disparos disp;
     public GameObject x,sup;
     public Inventario inventario;
     public GameObject objeto;
-
+    private int contador=0;
     private GameObject boton;
 
     void Start()
     {
-      
+       
+        
+           
+        
         InsertandoALDiccionario();
 
         x.SetActive(false);
@@ -29,7 +32,7 @@ public class Shop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+       
     }
 
     public void alfabetico(int letra)
@@ -210,11 +213,34 @@ public class Shop : MonoBehaviour
 
                 }
                 break;
+
+            case 4:
+
+                foreach (int ind in diccionario.Keys)
+                {
+                   
+                    if (reciente.findItem(ind))
+                    {
+                        diccionario[ind].SetActive(true);
+                    }
+                    else
+                    {
+                        diccionario[ind].SetActive(false);
+                    }
+
+
+                }
+
+
+
+
+                break;
         }
 
 
     }
 
+  
     public void InsertandoALDiccionario()
     {
         int count =0;
@@ -255,11 +281,15 @@ public class Shop : MonoBehaviour
 
                  if (!inventario.lleno[i])
                  {
-                    
-                    
+                   
+
                     inventario.lleno[i] = true;
                     int otroTem = 0;
                     int.TryParse(temp.Substring(0, 2 + x), out otroTem);
+                    reciente.addItem(otroTem);
+                    contador++;
+                    string xt = reciente.inorder2();
+                    Debug.Log(xt +"eeeee");
                     GameObject game=sup;
                     game.transform.position = inventario.Slots[i].transform.position;
                     game.transform.SetParent(inventario.Slots[i].transform);
@@ -276,6 +306,7 @@ public class Shop : MonoBehaviour
                     int.TryParse(temp.Substring(3 + x, 4 - x  ), out vida.life);
                     disp.coin -= precio;
                     disp.dinero.text = disp.coin + "";
+                  
                     break;
 
                 }
@@ -283,8 +314,8 @@ public class Shop : MonoBehaviour
                 
 
             }
-             Debug.Log("casis");
-            Debug.Log(disp.coin+"    "+precio);
+             //Debug.Log("casis");
+           // Debug.Log(disp.coin+"    "+precio);
             
 
 
