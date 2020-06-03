@@ -14,7 +14,7 @@ namespace AAAAAA
         // Start is called before the first frame update
         void Start()
         {
-            Principal.addItem(5000);
+            
             /*Principal.addItem(19);
             Principal.addItem(60);
             Principal.addItem(1);
@@ -23,13 +23,18 @@ namespace AAAAAA
             Principal.AdiosItem(19);
             print("Inorder traversal of the given tree");
             Principal.inorder();*/
+            float timeNow2 = Time.realtimeSinceStartup;
+            print(timeNow2);
             while (c <= 10000){
-                if(c != 5000)
-                {
-                    Principal.addItem(c);                
-                }
+                //if(c != 5000)
+                //{
+                //    Principal.addItem(c);                
+                //}
+                Principal.addItem(c);
                 c++;
             }
+            float timeNow1 = Time.realtimeSinceStartup;
+            print(timeNow1);
         }
 
         // Update is called once per frame
