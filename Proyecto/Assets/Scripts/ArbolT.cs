@@ -142,8 +142,9 @@ public class Tienda
     int r = 0;
     private string inorderRec2(Nodo raiz)
     {
-      
-        
+       
+
+
         if (raiz != null)
         {
             inorderRec2(raiz.Izq);

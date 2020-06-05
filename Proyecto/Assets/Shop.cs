@@ -7,34 +7,43 @@ using System.Globalization;
 public class Shop : MonoBehaviour
 {
     public vida vida;
-    public GameObject[] objetos=new GameObject[16];
+    public GameObject[] objetos = new GameObject[16];
     public Dictionary<int, GameObject> diccionario = new Dictionary<int, GameObject>();
     public Tienda reciente = new Tienda();
+    public Tienda busc = new Tienda();
     public Disparos disp;
-    public GameObject x,sup;
+    public GameObject x, sup, player;
     public Inventario inventario;
-    public GameObject objeto;
+    public Inventario conver;
+
     private int contador=0;
+    public InputField buscador;
     private GameObject boton;
+    Vector3 tra;
+    public bool movi=true;
 
     void Start()
     {
-       
-        
-           
-        
+        movi = true;
+
+
+
         InsertandoALDiccionario();
 
         x.SetActive(false);
+        tra = player.transform.position;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        
     }
-
+    private void FixedUpdate()
+    {
+        buscar(buscador.text);
+    }
     public void alfabetico(int letra)
     {
         switch (letra)
@@ -251,11 +260,50 @@ public class Shop : MonoBehaviour
             int key = 0;
             int.TryParse(tem, out key);
             diccionario.Add(key, obj);
+            busc.addItem(key);
         }
 
     }
 
-   
+   public void buscar(string tapi)
+    {
+
+        
+
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+
+
+            movi = false;
+        }
+        else
+        {
+            movi = true;
+        }
+
+        if (conver.Convertidor(tapi) != 4321)
+        {
+            foreach (int ob in diccionario.Keys)
+            {
+                diccionario[ob].SetActive(false);
+            }
+
+            if (busc.findItem(conver.Convertidor(tapi)))
+            {
+                diccionario[conver.Convertidor(tapi)].SetActive(true);
+            }
+        }
+        else
+        {
+            foreach (int ob in diccionario.Keys)
+            {
+                diccionario[ob].SetActive(true);
+            }
+        }
+       
+
+
+    }
 
     public void Accion(int id)
     {
