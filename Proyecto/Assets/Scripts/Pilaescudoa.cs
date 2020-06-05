@@ -14,9 +14,10 @@ namespace AAAAAA
         //Pila Estado = new Pila(3);
         ListaMisionesP Estadoa = new ListaMisionesP();
         // Start is called before the first frame update
+        public BoxCollider2D ab;
         void Start()
         {
-
+            
         }
         private void OnTriggerEnter2D(Collider2D other)
         {
@@ -24,6 +25,7 @@ namespace AAAAAA
             {
                 other.transform.position = Tpp.transform.position + new Vector3(d, 0.0f, 0.0f);
                 d += 10;
+                other.enabled = false;
                 aI.Add(id, other.gameObject);
                 //Estado.push(id);
                 Estadoa.IngresarCabeza(id);
