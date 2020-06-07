@@ -371,7 +371,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -374.36, y: -153.38}
+  m_AnchoredPosition: {x: -495.3, y: -224.1}
   m_SizeDelta: {x: 51.28, y: 52.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &147255807
@@ -412,6 +412,7 @@ GameObject:
   - component: {fileID: 165665949}
   - component: {fileID: 165665954}
   - component: {fileID: 165665953}
+  - component: {fileID: 165665955}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -532,6 +533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tpp: {fileID: 147255805}
+  ab: {fileID: 0}
 --- !u!61 &165665954
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -558,6 +560,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 30, y: 52}
   m_EdgeRadius: 0
+--- !u!114 &165665955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165665948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e0a611aabb9b14489bc3fde10dd4b53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &226244535
 GameObject:
   m_ObjectHideFlags: 0
