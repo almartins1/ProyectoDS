@@ -21,9 +21,11 @@ public class Nodo
     public int Dato;
     public Nodo Izq;
     public Nodo Der;
+    public int count;
     public Nodo(int i)
     {
         Dato = i;
+        count = 1;
         Izq = null;
         Der = null;
     }
@@ -50,6 +52,11 @@ public class Tienda
         else if (value > current.Dato)
         {
             current.Der = masuno(current.Der, value);
+        }
+        else if (current.Dato == value)
+        {
+            current.count++;
+            return current;
         }
         else
         {
@@ -99,6 +106,11 @@ public class Tienda
         }
         else
         {
+            if (raiz.count > 1)
+            {
+                raiz.count--;
+                return raiz;
+            }
             if (raiz.Izq == null){
                 return raiz.Der;
             }
@@ -160,6 +172,41 @@ public class Tienda
     public string inorder2()
     {
        return inorderRec2(raiz);
+    }
+    public void insert(int i)
+    {
+        Nodo ae = new Nodo(i);
+        if (raiz == null)
+        {
+            raiz = ae;
+        }
+        else
+        {
+            Nodo current = raiz;
+            Nodo parent;
+            while (true)
+            {
+                parent = current;
+                if (i < current.Dato)
+                {
+                    current = current.Izq;
+                    if (current == null)
+                    {
+                        parent.Izq = ae;
+                        return;
+                    }
+                }
+                else
+                {
+                    current = current.Der;
+                    if (current == null)
+                    {
+                        parent.Der = ae;
+                        return;
+                    }
+                }
+            }
+        }
     }
 
 
