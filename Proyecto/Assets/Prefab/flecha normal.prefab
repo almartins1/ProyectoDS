@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1775934460829576227}
   m_Layer: 0
   m_Name: flecha normal
-  m_TagString: Untagged
+  m_TagString: arma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

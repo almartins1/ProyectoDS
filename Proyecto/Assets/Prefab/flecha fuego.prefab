@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 2052159304}
   m_Layer: 0
   m_Name: flecha fuego
-  m_TagString: Untagged
+  m_TagString: arma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,8 +203,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 520
   pro: {fileID: 5047845569934478390, guid: 93728ded6257a6042be9bc8065d7ec69, type: 3}
-  x: -1
-  y: 0
+  x: 0
+  y: 1
   pros: {fileID: 8291236013720210064}
 --- !u!61 &2743528269547876940
 BoxCollider2D:

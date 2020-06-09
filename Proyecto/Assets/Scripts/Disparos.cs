@@ -8,7 +8,7 @@ public class Disparos : MonoBehaviour
     public Shop tienda;
     public float tiempo = 0.5f;
     public float lapso = 0;
-    int flecha = 1;
+    int flecha = 7;
    public int coin = 0;
     public GameObject[] tipos = new GameObject[4];
     public  string tipo="normal";

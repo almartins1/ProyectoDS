@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: -3132191196011694905}
   m_Layer: 0
   m_Name: flecha rayo
-  m_TagString: Untagged
+  m_TagString: arma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

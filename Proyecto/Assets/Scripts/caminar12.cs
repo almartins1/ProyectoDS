@@ -12,6 +12,7 @@ public class caminar12 : MonoBehaviour
     private Vector3 start, end;
     bool player = false;
     bool x=false;
+    public bool lado;
 
 
 
@@ -48,12 +49,26 @@ public class caminar12 : MonoBehaviour
     {
         if (transform.position.x < target.transform.position.x)
         {
-            x = false;
+            if (lado)
+            {
+                x = true;
+            }
+            else
+            {
+                x = false;
+            }
         }
 
         if (transform.position.x > target.transform.position.x)
         {
-            x = true;
+            if (lado)
+            {
+                x = false;
+            }
+            else
+            {
+                x = true;
+            }
         }
 
         if (!player)
@@ -96,12 +111,26 @@ public class caminar12 : MonoBehaviour
 
             if (transform.position.x < col.transform.position.x)
             {
-                x = false;
+                if (lado)
+                {
+                    x = true;
+                }
+                else
+                {
+                    x = false;
+                }
             }
 
             if (transform.position.x > col.transform.position.x)
             {
-                x = true;
+                if (lado)
+                {
+                    x =false ;
+                }
+                else
+                {
+                    x = true;
+                }
             }
 
 

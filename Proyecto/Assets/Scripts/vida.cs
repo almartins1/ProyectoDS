@@ -5,8 +5,10 @@ using UnityEngine;
 public class vida : MonoBehaviour
 {
     public ArrayList arr = new ArrayList();
-    public int life = 6;
-    public int ataque=2;
+    public int life = 800;
+    public int ataquene=2;
+    public int ataque=4;
+    public int vidaEne=8;
  
     public GameObject cora1, cora2, cora3;
     void Start()
@@ -18,7 +20,7 @@ public class vida : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(ataque);
+        Debug.Log(ataquene);
         switch (life)
         {
             case 0:
@@ -54,8 +56,11 @@ public class vida : MonoBehaviour
     }
     void Update()
     {
-        
-        Debug.Log(life);
+        if (vidaEne <= 0)
+        {
+            Destroy(this.gameObject.transform.parent);
+        }
+        Debug.Log(this.gameObject.transform.parent.name);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -63,7 +68,23 @@ public class vida : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("golpe");
-            life--;
+            life-=ataquene;
         }
+
+       
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("golpe");
+            life -= ataquene;
+        }
+
+       
     }
 }

@@ -349,7 +349,7 @@ public class Shop : MonoBehaviour
 
                     
 
-                     int.TryParse(temp.Substring(2 + x, 3 + x), out vida.ataque);
+                     int.TryParse(temp.Substring(2 + x, 3 + x), out vida.ataquene);
                     Debug.Log(temp.Substring(2 + x, 3 + x)+"terr");
                     int.TryParse(temp.Substring(3 + x, 4 - x  ), out vida.life);
                     disp.coin -= precio;

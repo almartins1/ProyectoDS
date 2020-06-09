@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class golpe : MonoBehaviour
 {
-   public Animator anim;
-    public GameObject colider;
+   public Animator[] anim;
+    public GameObject[] colider;
+    public int id;
     
     void Start()
-    {
-        
-        colider.SetActive(false);
+    { int count =0;
+        foreach(GameObject ga in colider)
+        {
+            colider[count].SetActive(false);
+            count++;
+        }
+       
          
     }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -24,8 +29,10 @@ public class golpe : MonoBehaviour
     {
         if (col.tag == "malo")
         {
-            colider.SetActive(true);
-            anim.SetBool("golpe", true);
+            int tem = 0;
+            int.TryParse(col.transform.GetChild(0).name, out tem);
+            colider[tem].SetActive(true);
+            anim[tem].SetBool("golpe", true);
 
             
         }
@@ -36,9 +43,12 @@ public class golpe : MonoBehaviour
     {
         if (col.tag == "malo")
         {
-            colider.SetActive(false);
+            int tem = 0;
+            int.TryParse( col.transform.GetChild(0).name ,out tem);
+            
+            colider[tem].SetActive(false);
 
-            anim.SetBool("golpe", false);
+            anim[tem].SetBool("golpe", false);
 
 
         }
