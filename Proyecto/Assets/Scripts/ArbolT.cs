@@ -21,11 +21,11 @@ public class Nodo
     public int Dato;
     public Nodo Izq;
     public Nodo Der;
-    public int count;
+    //public int count;
     public Nodo(int i)
     {
         Dato = i;
-        count = 1;
+        //count = 1;
         Izq = null;
         Der = null;
     }
@@ -53,11 +53,11 @@ public class Tienda
         {
             current.Der = masuno(current.Der, value);
         }
-        else if (current.Dato == value)
+       /* else if (current.Dato == value)
         {
             current.count++;
             return current;
-        }
+        }*/
         else
         {
             // RECORDAR CAMBIAR ESTA COSA "count"
@@ -106,11 +106,11 @@ public class Tienda
         }
         else
         {
-            if (raiz.count > 1)
+            /*if (raiz.count > 1)
             {
                 raiz.count--;
                 return raiz;
-            }
+            }*/
             if (raiz.Izq == null){
                 return raiz.Der;
             }
