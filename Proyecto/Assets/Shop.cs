@@ -260,7 +260,7 @@ public class Shop : MonoBehaviour
             int key = 0;
             int.TryParse(tem, out key);
             diccionario.Add(key, obj);
-            busc.addItem(key);
+            busc.añadir(key);
         }
 
     }
@@ -293,13 +293,13 @@ public class Shop : MonoBehaviour
                 diccionario[conver.Convertidor(tapi)].SetActive(true);
             }
         }
-        else
+       /* else
         {
             foreach (int ob in diccionario.Keys)
             {
                 diccionario[ob].SetActive(true);
             }
-        }
+        }*/
        
 
 
@@ -334,7 +334,7 @@ public class Shop : MonoBehaviour
                     inventario.lleno[i] = true;
                     int otroTem = 0;
                     int.TryParse(temp.Substring(0, 2 + x), out otroTem);
-                    reciente.addItem(otroTem);
+                    reciente.añadir(otroTem);
                     contador++;
                     string xt = reciente.inorder2();
                     Debug.Log(xt +"eeeee");

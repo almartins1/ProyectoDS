@@ -1523,7 +1523,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tipo
+  m_Text: Todo
 --- !u!222 &208775710
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1613,8 +1613,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1471248120}
   m_HandleRect: {fileID: 1471248119}
   m_Direction: 2
-  m_Value: 1.0000011
-  m_Size: 0.3855095
+  m_Value: 1.0000002
+  m_Size: 0.3949682
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -17541,12 +17541,12 @@ PrefabInstance:
     - target: {fileID: 1684858832581999141, guid: a7923ccb036ae414bbc0a8d26ae78b8f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4126
+      value: 3695
       objectReference: {fileID: 0}
     - target: {fileID: 1684858832581999141, guid: a7923ccb036ae414bbc0a8d26ae78b8f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3670
+      value: -3732
       objectReference: {fileID: 0}
     - target: {fileID: 1684858832581999141, guid: a7923ccb036ae414bbc0a8d26ae78b8f,
         type: 3}
@@ -17675,7 +17675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 886615863}
-  speed: 0
+  speed: 50
   lado: 1
 --- !u!212 &1972123876
 SpriteRenderer:
@@ -17890,7 +17890,7 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Tipo
+    - m_Text: Todo
       m_Image: {fileID: 21300000, guid: ff0184612d502704b9915566c808ec54, type: 3}
     - m_Text: Combate
       m_Image: {fileID: 0}
@@ -18203,7 +18203,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.000015258789, y: 285.49954}
+  m_AnchoredPosition: {x: -0.000015258789, y: 285.4999}
   m_SizeDelta: {x: -4.7, y: 720.7}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2094495068
