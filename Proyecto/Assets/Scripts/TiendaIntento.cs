@@ -17,16 +17,6 @@ namespace AAAAAA
         // Start is called before the first frame update
         void Start()
         {
-            Principal.addItem(25000);
-            Principal.addItem(15000);
-            Principal.addItem(20000);
-            Principal.addItem(10000);
-            Principal.addItem(5000);
-            Principal.addItem(40000);
-            Principal.addItem(30000);
-            Principal.addItem(35000);
-            Principal.addItem(45000);
-            Principal.addItem(50000);
             /*Principal.addItem(19);
             Principal.addItem(60);
             Principal.addItem(1);
@@ -37,16 +27,13 @@ namespace AAAAAA
             Principal.inorder();*/
             float timeNow2 = Time.realtimeSinceStartup;
             print(timeNow2);
-            while (c <= 50000){
-                if (c % 5000 != 0)
-                {
-                    Principal.addItem(c);
-                }
+            while (c <= 100000){
+                Principal.añadir(c);
                 c++;
             }
             float timeNow1 = Time.realtimeSinceStartup;
             print(timeNow1);
-            Principal.AdiosItem(9999);
+            Principal.AdiosItem(100000);
             float timeNow3 = Time.realtimeSinceStartup;
             print(timeNow3);
         }

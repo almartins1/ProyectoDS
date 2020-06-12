@@ -22,9 +22,11 @@ public class Nodo
     public Nodo Izq;
     public Nodo Der;
     //public int count;
+    public int ht;
     public Nodo(int i)
     {
         Dato = i;
+        ht = 1;
         //count = 1;
         Izq = null;
         Der = null;
@@ -208,8 +210,83 @@ public class Tienda
             }
         }
     }
+    private int max(int a, int b)
+    {
+        return (a > b) ? a : b;
+    }
+    int altura(Nodo N)
+    {
+        if (N == null)
+        {
+            return 0;
+        }
+        return N.ht;
+    }  
+    Nodo rightRotate(Nodo y)
+    {
+        Nodo x = y.Izq;
+        Nodo T2 = x.Der; 
+        x.Der = y;
+        y.Izq = T2;
+        y.ht = max(altura(y.Izq),altura(y.Der)) + 1;
+        x.ht = max(altura(x.Izq),altura(x.Der)) + 1;
+        return x;
+    }
+    Nodo leftRotate(Nodo x)
+    {
+        Nodo y = x.Der;
+        Nodo T2 = y.Izq;
+        y.Izq = x;
+        x.Der = T2; 
+        x.ht= max(altura(x.Izq),altura(x.Der)) + 1;
+        y.ht = max(altura(y.Izq),altura(y.Der)) + 1;
+        return y;
+    }
+    int getBalance(Nodo N)
+    {
+        if (N == null)
+        {
+            return 0;
+        }
+        return altura(N.Izq) - altura(N.Der);
+    }
+    Nodo insert(Nodo node, int key)
+    {
+        if (node == null)
+            return new Nodo(key);
+        if (key < node.Dato)
+            node.Izq = insert(node.Izq, key);
+        else if (key > node.Dato)
+            node.Der = insert(node.Der, key);
+        else  
+            return node;        
+        node.ht = 1 + max(altura(node.Izq),altura(node.Der));       
+        int balanc = getBalance(node);
+ 
+        if (balanc > 1 && key < node.Izq.Dato)
+            return rightRotate(node);
+ 
+        if (balanc < -1 && key > node.Der.Dato)
+            return leftRotate(node);
+  
+        if (balanc > 1 && key > node.Izq.Dato)
+        {
+            node.Izq = leftRotate(node.Izq);
+            return rightRotate(node);
+        }
+ 
+        if (balanc < -1 && key < node.Der.Dato)
+        {
+            node.Der = rightRotate(node.Der);
+            return leftRotate(node);
+        }
 
-
+        return node;
+    }
+    public void añadir(int a)
+    {
+        raiz = insert(raiz, a);
+    }
 }
 
 
