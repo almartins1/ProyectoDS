@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class vida : MonoBehaviour
 {
+    //esta en arma
     public ArrayList arr = new ArrayList();
     public int life = 800;
-    public int ataquene=2;
-    public int ataque=4;
-    public int vidaEne=8;
- 
+    public int ataquene = 2;
+    public int ataque = 4;
+    public bool quitar;
+    public int vidaEne = 8;
+    public AAAAAA.Pilaescudoa pila  ;
     public GameObject cora1, cora2, cora3;
+    public int col;
     void Start()
     {
 
@@ -56,6 +59,7 @@ public class vida : MonoBehaviour
     }
     void Update()
     {
+       
         if (vidaEne <= 0)
         {
             Destroy(this.gameObject.transform.parent);
@@ -67,7 +71,9 @@ public class vida : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            
             Debug.Log("golpe");
+
             life-=ataquene;
         }
 
@@ -81,6 +87,13 @@ public class vida : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
+            col++;
+            if (col >= 4) { 
+                col = 0;
+                Debug.Log("lami");
+                pila.quitar = true;
+                
+            }
             Debug.Log("golpe");
             life -= ataquene;
         }
