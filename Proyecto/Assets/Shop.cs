@@ -344,7 +344,7 @@ public class Shop : MonoBehaviour
 
 
                     Instantiate(diccionario[otroTem], game.transform, false).transform.SetParent(inventario.Slots[i].transform);
-                   
+                    diccionario[otroTem].SetActive(false);
 
 
                     
