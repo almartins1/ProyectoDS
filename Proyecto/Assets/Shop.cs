@@ -10,6 +10,7 @@ public class Shop : MonoBehaviour
     public GameObject[] objetos = new GameObject[16];
     public Dictionary<int, GameObject> diccionario = new Dictionary<int, GameObject>();
     public Tienda reciente = new Tienda();
+    public Tienda eliminacion = new Tienda();
     public Tienda busc = new Tienda();
     public Disparos disp;
     public GameObject x, sup, player;
@@ -38,7 +39,7 @@ public class Shop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        eliminados();
     }
     private void FixedUpdate()
     {
@@ -248,7 +249,16 @@ public class Shop : MonoBehaviour
 
 
     }
-
+    private void eliminados()
+    {
+        foreach (int ob in diccionario.Keys)
+        {
+            if (eliminacion.findItem(ob))
+            {
+                diccionario[ob].SetActive(false);
+            }
+        }
+    }
   
     public void InsertandoALDiccionario()
     {
@@ -344,7 +354,9 @@ public class Shop : MonoBehaviour
 
 
                     Instantiate(diccionario[otroTem], game.transform, false).transform.SetParent(inventario.Slots[i].transform);
-                    diccionario[otroTem].SetActive(false);
+                    eliminacion.añadir(otroTem);
+                    
+                    //diccionario[otroTem].SetActive(false);
 
 
                     
