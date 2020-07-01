@@ -27,13 +27,13 @@ namespace AAAAAA
             Principal.inorder();*/
             float timeNow2 = Time.realtimeSinceStartup;
             print(timeNow2);
-            while (c <= 100000){
+            while (c <= 100000000){
                 Principal.añadir(c);
                 c++;
             }
             float timeNow1 = Time.realtimeSinceStartup;
             print(timeNow1);
-            Principal.AdiosItem(100000);
+            Principal.AdiosItem(100000000);
             float timeNow3 = Time.realtimeSinceStartup;
             print(timeNow3);
         }
