@@ -6,6 +6,8 @@ public class SuperTienda : MonoBehaviour
 {
     public GameObject shop, music1, music2;
     private bool shopActive;
+    public bool ota;
+
     void Start()
     {
      music2.SetActive(false);
@@ -39,6 +41,7 @@ public class SuperTienda : MonoBehaviour
                 }
                 else
                 {
+                    ota = true;
                     music1.SetActive(true);
                     music2.SetActive(false);
 
