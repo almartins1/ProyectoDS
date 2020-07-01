@@ -10,6 +10,8 @@ Proyecto -> Assets -> Scripts
                             -> Dict.cs   (Implementacion de listas enlazadas)
                             -> LArray.cs  (Implementacion de listas con arreglos)
                             -> Coordenadas.cs  (Script donde se implementan las estructuras)
+                            -> ArbolT.cs (Implementacion de arbol binario y avl)
+                            -> LCP.cs (Implementacion pilas y colas con listas enlazadas)
                             -> El resto de scripts tienen que ver con funciones del Unity
                             
                             
