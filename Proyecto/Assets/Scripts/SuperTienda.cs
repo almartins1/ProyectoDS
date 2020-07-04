@@ -6,7 +6,7 @@ public class SuperTienda : MonoBehaviour
 {
     public GameObject shop, music1, music2;
     private bool shopActive;
-    public bool ota;
+    public bool ota=false;
 
     void Start()
     {
