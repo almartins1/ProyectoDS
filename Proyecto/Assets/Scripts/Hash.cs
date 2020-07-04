@@ -18,11 +18,11 @@ public class Hash : MonoBehaviour
 }
 public class NodoObj
 {
-    int Valor;
+    public int valor;
     public NodoObj next;
     public NodoObj(int n)
     {
-        Valor = n;
+        valor = n;
         next = null;
     }
 }
@@ -46,18 +46,88 @@ public class HashC
     public void InsertarObj(int N)
     {
         int indx = IndiceObj(N);
-        NodoObj a = new NodoObj(N);
-        if(TipoObj[indx]== null)
+        NodoObj a = TipoObj[indx];
+        NodoObj ins = new NodoObj(N);
+        if (a == null)
         {
-            TipoObj[indx] = a;
+            TipoObj[indx] = ins;
         }
         else
-        {          
-            while (TipoObj[indx].next != null)
+        {
+            while (a.next != null)
             {
-                TipoObj[indx] = TipoObj[indx].next;
+                if(a.valor == N)
+                {
+                    MonoBehaviour.print("El valor ya esta insertado");
+                    return;
+                }
+                a = a.next;
             }
-            TipoObj[indx].next = a;
+            a.next = ins;
         }
+        Ocupado++;
+    }
+    public void remove(int k)
+    {
+        int b = IndiceObj(k);
+        NodoObj r = TipoObj[b];
+        NodoObj prev = null;
+        while(r != null)
+        {
+            if(r.valor == k)
+            {
+                break;
+            }
+            prev = r;
+            r = r.next;
+        }
+        if (r == null)
+        {
+            MonoBehaviour.print("F");
+            return;
+        }
+        Ocupado--;
+        if (prev != null)
+        {
+            prev.next = r.next;
+            return;
+        }
+        else
+        {
+            TipoObj[b] = r.next;
+            r = null;            
+            return;
+        }
+    }
+    public void get(int k)
+    {
+        int b = IndiceObj(k);
+        NodoObj a = TipoObj[b];
+        while (a != null)
+        {
+            if(a.valor == k)
+            {
+                MonoBehaviour.print("Si esta el numero");
+                return;
+            }
+            a = a.next;
+        }
+        MonoBehaviour.print("F no esta");
+        return;
+
+    }
+    public void imp(int k)
+    {
+        int b = IndiceObj(k);
+        NodoObj a = TipoObj[b];
+        while(a != null)
+        {
+            MonoBehaviour.print(a.valor + " ");
+            a = a.next;
+        }
+    }
+    int digito2(int number)
+    {            
+        return number /= 10; 
     }
 }
