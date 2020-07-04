@@ -35,7 +35,7 @@ public class Tele : MonoBehaviour
                 Destroy(carga, 4f);
                 StartCoroutine(Espera(4.1f));
                
-                Destroy(this.gameObject, 9f);
+                Destroy(this.gameObject);
             }
         }
 
