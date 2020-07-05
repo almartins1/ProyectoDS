@@ -27,14 +27,21 @@ public class PiedraHash : MonoBehaviour
         l.imp(3);*/
         float timeNow1 = Time.realtimeSinceStartup;
         print(timeNow1);
-        while (c < 10000){           
-            l.InsertarObj(c);
-            c++;
-            
+        while (c < 100000){           
+            l.Insertar2(c);
+            c++;    
         }
         float timeNow2 = Time.realtimeSinceStartup;
         print(timeNow2);
-
+        int i = Random.Range(0, c - 1);
+        float timeNow3 = Time.realtimeSinceStartup;
+        print(timeNow3);
+        l.get(i);
+        float timeNow4 = Time.realtimeSinceStartup;
+        print(timeNow4);
+        l.remove(i);
+        float timeNow5 = Time.realtimeSinceStartup;
+        print(timeNow5);
     }
 
     // Update is called once per frame

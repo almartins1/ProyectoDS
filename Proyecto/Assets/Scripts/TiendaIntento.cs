@@ -27,7 +27,7 @@ namespace AAAAAA
             Principal.inorder();*/
             float timeNow2 = Time.realtimeSinceStartup;
             print(timeNow2);
-            while (c <= 100000000){
+            while (c <= 1){
                 Principal.añadir(c);
                 c++;
             }

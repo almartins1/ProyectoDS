@@ -29,7 +29,6 @@ public class NodoObj
 public class HashC
 {
     NodoObj[] TipoObj;
-    int Ocupado = 0;
     int Tamaño;
     public HashC(int capacidad)
     {
@@ -39,18 +38,15 @@ public class HashC
 
     public int IndiceObj(int Id)
     {
-        int ObjID;
-        ObjID = Id % Tamaño;
-        return ObjID;
+        return Id % Tamaño;
     }
     public void InsertarObj(int N)
     {
         int indx = IndiceObj(N);
         NodoObj a = TipoObj[indx];
-        NodoObj ins = new NodoObj(N);
         if (a == null)
         {
-            TipoObj[indx] = ins;
+            TipoObj[indx] = new NodoObj(N);
         }
         else
         {
@@ -63,9 +59,15 @@ public class HashC
                 }
                 a = a.next;
             }
-            a.next = ins;
+            a.next = new NodoObj(N);
         }
-        Ocupado++;
+    }
+    public void Insertar2(int N)
+    {
+        int indx = IndiceObj(N);
+        NodoObj temp = TipoObj[indx];
+        TipoObj[indx] = new NodoObj(N);
+        TipoObj[indx].next = temp;
     }
     public void remove(int k)
     {
@@ -86,7 +88,6 @@ public class HashC
             MonoBehaviour.print("F");
             return;
         }
-        Ocupado--;
         if (prev != null)
         {
             prev.next = r.next;
@@ -126,8 +127,10 @@ public class HashC
             a = a.next;
         }
     }
-    int digito2(int number)
-    {            
-        return number /= 10; 
+    public int digito2(int number)
+    {
+        number = number / 10;
+        number = number % 10;
+        return number;
     }
 }
